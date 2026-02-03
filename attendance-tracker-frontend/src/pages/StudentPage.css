@@ -1,0 +1,116 @@
+/* BACKGROUND */
+.student-extreme-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+}
+
+/* GLASS PANEL (FACULTY TWIN) */
+.student-glass {
+  width: 520px;
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  color: white;
+  text-align: center;
+  animation: fadeSlideUp 0.6s ease;
+}
+
+/* HEADER */
+.student-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-top h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.student-desc {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 15px 0 30px;
+}
+
+/* BUTTONS */
+.primary-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: #002b36;
+}
+
+.secondary-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* SCANNER SPOTLIGHT */
+.scanner-glow-wrapper {
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 35px rgba(0, 255, 157, 0.55);
+  animation: scannerPulse 2.2s infinite;
+}
+
+@keyframes scannerPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(0, 255, 157, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.35);
+  }
+}
+
+/* STATUS PANELS */
+.status-glass {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  animation: fadeSlideUp 0.4s ease;
+}
+
+.status-glass.success {
+  color: #b9f6ca;
+}
+
+.status-glass.error {
+  color: #ffcdd2;
+}
+
+/* ENTRY ANIMATION */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

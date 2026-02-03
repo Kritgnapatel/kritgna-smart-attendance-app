@@ -1,0 +1,111 @@
+.home-extreme-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+}
+
+.home-glass {
+  width: 700px;
+  padding: 60px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+}
+
+.home-title {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* .home-title span {
+  color: #00ff9d;
+} */
+ .home-title span {
+  color: #b6f0e2; /* soft mint */
+}
+
+
+.home-tagline {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.home-cards {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.home-card {
+  flex: 1;
+  padding: 35px 25px;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.home-card:hover::before {
+  opacity: 1;
+}
+
+.home-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.home-card .icon {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+.home-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.home-card p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+ .faculty-card {
+  background: linear-gradient(135deg, #f07878, #e933aa);
+  box-shadow: 0 12px 28px rgba(30, 60, 114, 0.45);
+}
+
+
+/* .student-card {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  box-shadow: 0 0 40px rgba(56, 239, 125, 0.6);
+} */
+ .student-card {
+  background: linear-gradient(135deg, #11998e, #4fc57c);
+  box-shadow: 0 12px 28px rgba(17, 153, 142, 0.45);
+}
+
+.home-card .icon {
+  color: #f5f7fa; /* soft white */
+}
+
