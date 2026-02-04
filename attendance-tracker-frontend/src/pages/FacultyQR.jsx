@@ -4,7 +4,6 @@ import "./FacultyDashboard.css";
 
 const FacultyQR = () => {
   const [qrCode, setQrCode] = useState(null);
-  const [expiresAt, setExpiresAt] = useState(null);
   const [timeLeft, setTimeLeft] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -23,7 +22,6 @@ const FacultyQR = () => {
       const qrRes = await API.get(`/sessions/qr/${sessionId}`);
 
       setQrCode(qrRes.data.qrCode);
-      setExpiresAt(qrRes.data.expiresAt);
 
       // Calculate countdown
       const expiryTime = new Date(qrRes.data.expiresAt).getTime();
@@ -38,11 +36,10 @@ const FacultyQR = () => {
 
   // Countdown timer
   useEffect(() => {
-    if (!timeLeft) return;
+    if (timeLeft === null) return;
 
     if (timeLeft <= 0) {
       setQrCode(null);
-      setExpiresAt(null);
       setTimeLeft(null);
       return;
     }
@@ -93,7 +90,6 @@ const FacultyQR = () => {
               className="secondary-btn"
               onClick={() => {
                 setQrCode(null);
-                setExpiresAt(null);
                 setTimeLeft(null);
               }}
             >
